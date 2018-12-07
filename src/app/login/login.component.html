@@ -1,0 +1,39 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }">Logging in</ngx-loading>
+<div id="form">
+  <!-- a form with a template reference possible through angular and bound on the 
+      (submit) event which sends a reference to the entire form as an argument.  
+  -->
+  <form #loginForm="ngForm" (submit)="onLogin(loginForm)">
+      <h1 align="center">
+          <span>Sign in to</span>
+          <br>
+          <span class="gtitle">GreenCity.</span>
+        </h1>
+        <h3> Enter your details below. </h3>
+        <h3>
+          <span id="error"> </span>
+        </h3>
+        <!-- div class container that has log in contents -->
+        <div class="container">
+          <!-- label and input tag for username -->
+          <label for="username">
+            <strong>Username</strong>
+          </label>
+          <!-- [(ngModel)] is the 2 way data binding format in angular which allows values entered here to be saved in the class -->
+          <input [(ngModel)]="user.username" type="text" style="margin-bottom:20px;" placeholder="Enter Username" name="username" id="username" required>
+          <!-- label and input tag for password -->
+          <label for="password">
+            <strong>Password</strong>
+          </label>
+          <input [(ngModel)]="user.password"  type="password" placeholder="Enter Password" name="password" id="password" required>
+          <!-- submit button for the form -->
+          <input type="submit" value="Login">
+          <br>
+          <!-- closing div tag for class container -->
+        </div>
+  </form>
+  
+  <!-- closing div tag for form  -->
+</div>
+
+<!-- closing body tag -->

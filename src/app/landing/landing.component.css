@@ -1,0 +1,197 @@
+
+/* selecting everything on the page and setting margin and
+padding to 0 */
+*{
+    padding:0;
+    margin:0;
+  }
+  
+  /* bg-image class width and height set to 100%
+  and url of image is set*/
+  .bg-image{
+    width: 100%;
+    height: 100%;
+    background-image:  url('../../assets/img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* image covers the entire container */
+    background-size: cover;
+  }
+  
+  /* container class width, height, position and margin set */
+  .container{
+    width:970px;
+    height: 600px;
+    position:relative;
+    margin: 0 auto; /*centers the div tag */
+  }
+  
+  /*setting the width and padding of the entire header*/
+  .header{
+    width:960px;
+    padding:20px;
+  }
+  
+  /* green city logo properties set */
+  #logo_holder{
+      width:240px;
+      height:70px;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color:#fff;
+  }
+  
+  /* font of green city logo set to roboto and font size set to 150% */
+  #logo_holder > span{
+      font-family:'Roboto';
+      font-size: 150%
+  }
+  
+  /*shifting the ul elements to the right*/
+  nav> ul{
+    position: absolute;
+    right: 0;
+    top: 41px;
+  }
+  
+  /*removing list style, making the list float to the left
+  and setting right and left padding to 10px*/
+  nav>ul>li{
+    font-family: 'Open Sans', sans-serif;
+    list-style: none;
+    float:left;
+    padding: 0 10px 0 10px;
+    cursor:pointer;
+    color: #fff; /*setting color of text to white */
+  }
+  
+  
+  /* link tags on the list navigation bar properties are set   */
+  nav>ul>li>a{
+      text-decoration: none;    /*to remove the underline*/
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 2px;
+      color:#fff;                /*font color of links are set to white */
+      transition: color 0.3s;
+  }
+  
+  /* on hovering over links, color is set to a shade of green   */
+  nav>ul>li>a:hover{
+    color: #5D932D;
+  }
+  
+  #municipality{
+    color:#2c3e50;
+    transition: color 0.3s;
+  }
+  #municipality:hover{
+    color:  #5D932D;
+
+  }
+  /*setting font and position properties for the main text on the image  */
+  .main-text{
+    /* color:#636e72; shade of grey*/
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    color:#fff;
+    padding-left: 20px;
+  }
+  
+  /* setting position properties for the h5 tag in main-text */
+  h5{
+    position: relative;
+    top:100px;
+  }
+  
+  /*setting font properties for the first span tag in h5-
+  "make your city greener"*/
+  h5 > span:nth-child(1){
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* setting font and position properties for "join the community" */
+  h5 > #join{
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-top: 20px;
+    position: relative;
+    left: 10px;
+    top: 19px;
+  }
+  
+  
+  /* setting getstarted button properties */
+  button{
+    margin: 5px;
+    border:none;
+    padding:10px;
+    letter-spacing: 1px;
+    font-size:16px;
+    color: #fff;
+    /*shadow to the right and below the box to 1px,
+     blurring by 4px and setting color to semi-transparent */
+    box-shadow:1px 1px 4px rgba(0,0,0,0.4);
+    border-radius: 4px; /*curvature of the box*/
+    font-family: 'Open Sans', sans-serif;
+    outline:none;
+    cursor: pointer;  /* cursor becomes a pointer  */
+    /* setting transition properites  */
+    transition: box-shadow 0.3s, color 0.3s ease-out, background-color 0.3s ease-out;
+    background: #5D932D;
+    position: relative;
+    top:150px;
+  }
+  
+  /* getstarted button on hover changes color */
+  button:hover{
+    background: #C5D6A2; /*light shade of geen*/
+  }
+  
+  
+  /* content class position properties set */
+  .content{
+    width:70%;
+    margin-left: 15%;
+    position: relative;
+    top:30px;
+    padding-bottom:40px;  /*for space at the bottom of the page*/
+  }
+  
+  /* setting position properties f
+  or div tags inside content class */
+  .content > div{
+    margin-top:60px; /*for spacing between the div tags*/
+  }
+  
+  /* setting font properties
+  for h1 tag inside the div tags of content class */
+  .content > div > h1{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  /* setting position properties
+  for image tag inside the div tags of content class */
+  .content > div > img{
+    width:50%;
+    margin-left: 25%;
+  }
+  
+  /* setting position and font properties
+  for image tag inside the div tags of content class */
+  .content > div > p{
+    position: relative;
+    top:18px;
+    font-family: 'Roboto';
+    font-weight: 300;
+  }
+  

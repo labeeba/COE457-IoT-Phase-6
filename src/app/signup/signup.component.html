@@ -1,0 +1,47 @@
+<!-- form tag where action is linked to another html page -->
+<div id="form">
+    <!-- a form with a template reference possible through angular and bound on the 
+      (submit) event which sends a reference to the entire form as an argument.  
+  -->
+  <form #signupForm="ngForm" (submit)="onSignup(signupForm)" >
+      <h1 align="center">
+          <span>Get Started with</span>
+          <br>
+          <span class="gtitle">GreenCity.</span>
+        </h1>
+        <h3> Enter your details below. </h3>
+        <span id="error"> </span>
+        <!-- div class container that has log in contents -->
+        <div class="container">
+          <!-- label and input tag for email -->
+          <label for="email">
+            <strong>Email</strong>
+          </label>
+          <!-- [(ngModel)] is the 2 way data binding format in angular which allows values entered here to be saved in the class -->
+          <input [(ngModel)]="user.email" type="email" placeholder="Enter email address" name="emailaddress" id="email" required>
+          <!-- label and input tag for username -->
+          <label for="username">
+            <strong>Username</strong>
+          </label>
+          <input [(ngModel)]="user.username" type="text" placeholder="Enter Username" name="username" id="username" required>
+          <!-- label and input tag for password -->
+          <label for="password">
+            <strong>Password</strong>
+          </label>
+          <input [(ngModel)]="user.password" type="password" placeholder="Enter Password" name="password" id="password" required>
+          <!-- label and input tag for location-->
+          <label for="location">
+            <strong>Location</strong>
+          </label>
+          <input [(ngModel)]="user.location" type="text" placeholder="Enter location" name="location" id="location" required>
+    
+          <!-- submit button for the form -->
+          <input type="submit" value="Sign Up" id="submit">
+          <br>
+          <!-- closing div tag for class container -->
+        </div>
+  </form>
+
+
+    <!-- closing div form tag -->
+  </div>

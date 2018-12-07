@@ -1,0 +1,77 @@
+ <!-- div tag for header -->
+ <ngx-loading></ngx-loading>
+ <div id="header">
+    <!-- div tag for logo-->
+    <div id="logo_holder">
+        <span class="logo">
+            <i class="fa fa-leaf"></i>
+        </span>&nbsp;&nbsp;&nbsp;&nbsp;
+        <span style="letter-spacing: 2px; font-weight:100;">GREEN CITY</span>
+    </div>
+    <!-- div tag for navigation links to home, air and litter maps -->
+    <div id="nav_options">
+        <!-- <span class="logo"><i class="fa fa-home"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+        <span style="letter-spacing: 2px; font-weight:100;">
+            <a id="home" href="/home"> HOME </a>
+        </span>
+        <!-- <span style="letter-spacing: 2px; font-weight:100;"><a id="air" href= "#air"> AIR POLLUTION MAP </a></span> -->
+        <span style="letter-spacing: 2px; font-weight:100;">
+            <a id="litter" href="/map"> LITTER MAP </a>
+        </span>
+    </div>
+    <!-- div tag for outer settings - sign out option -->
+    <div id="settings_outer">
+        <span>
+            <i class="fa fa-bell"></i>
+        </span>
+        <div>L</div>
+        <!-- <span><i class="fa fa-chevron-down"></i></span> -->
+        <!-- click listener for the signout button which will execute the onSignout() method in ths ts file -->
+        <span style="letter-spacing: 2px; font-weight:100;">
+            <a (click)="onSignout()"> SIGN OUT </a>
+        </span>
+    </div>
+</div>
+
+<!-- div tag for the main contents of the page -->
+<div id="main_container">
+    <!-- div tag for left most column of the page -->
+    <div id="left_outer">
+        <!-- displaying the date to the user via angular's string interpolation -->
+        <h4 id="date" align="center">{{date}}</h4>
+        <!-- div tag for user profile picture -->
+        <div id="dp"></div>
+        <h5 id="greeting_">Hi, Labeeba!</h5>
+
+        <!-- div tag for skin, heart and pin options -->
+        <div class="tabs_outer">
+            <!-- <div class="tabs"><span><i class="fa fa-sun"></i> &nbsp;&nbsp;&nbsp; <a id="skin" href="#skin"> Your Skin </a> </span></div> -->
+            <!-- <div class="tabs"><span><i class="fa fa-heartbeat"></i> &nbsp;&nbsp; <a id="heart" href="#heart"> Your Heart </a> </span></div> -->
+            <!-- <div class="tabs">
+                <span>
+                    <i class="fa fa-map-marker-alt"></i> &nbsp;&nbsp;&nbsp;
+                    <a id="pins" href="#pins"> Your Marked Locations </a>
+                </span>
+            </div> -->
+        </div>
+    </div>
+
+    <!-- div tag for right most column of page -->
+    <div id="right_outer">
+        <!-- embedding another component the map component within 
+            the dashboard component through the map component's selector -->
+        <app-map></app-map>
+        <!-- <div id="floating-panel"> 
+            <p> Total <br> Locations </p>
+            <h1> 9 </h1>
+            <p>Red Bins</p> 
+            <h1> 1 </h1>
+            <p>Yellow Bins</p> 
+            <h1> 0 </h1>
+            <p>Green Bins</p> 
+            <h1> 1 </h1>
+        </div> -->
+    </div>
+    
+    <!-- <p> lalalalalalaallaalal </p> -->
+</div>

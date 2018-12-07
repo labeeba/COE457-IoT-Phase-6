@@ -1,0 +1,77 @@
+<div class="bg-image">
+  <!--container div tag that contains the header, logo and text placed on the image -->
+  <div class="container">
+    <!-- header div tag that contains the logo and navigation links -->
+    <div class="header">
+      <!-- nav tag groups all the navigation links -->
+      <nav>
+        <!-- logo_holder div tag that holds the logo of the website -->
+        <div id="logo_holder">
+          <!-- styling the logo -->
+          <span class="logo">
+            <i class="fa fa-leaf"></i>
+          </span>&nbsp;
+          <span style="letter-spacing: 2px; font-weight:300;"> GREEN CITY </span>
+        </div>
+        <!-- unordered list tag and anchor tag for options in the navgiation header bar -->
+        <ul>
+          <!-- <li>
+            <a href="#air"> Air Pollution </a>
+          </li>
+          <li>
+            <a href="#uv"> UV </a>
+          </li> -->
+          <li>
+            <a href="#trash"> Trash </a>
+          </li>
+          <!-- routerLink tells angular router to navigate to the given route -->
+          <li>
+            <a routerLink="/login"> Log in </a>
+          </li>
+          <li>
+            <a routerLink="/signup"> Sign up </a>
+          </li>
+          <li>
+            <a routerLink="/municipality" id = "municipality"> Municipality </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- main-text div tag that contains text and a button for signing up -->
+      <div class="main-text">
+        <h5>
+          <span>Make your city greener.</span>
+          <br>
+          <span id="join">Join the community to track unclean areas in your city!</span>
+        </h5>
+        <button id="getstarted">
+          <a> GET STARTED </a>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- closing the bg-image div tag -->
+</div>
+
+<!-- content div tag for the rest of the content on the page -->
+<div class="content">
+  <!-- div tag with id trash for content on trash -->
+  <div id="trash">
+    <!-- h1 tag to display the heading -->
+    <h1>
+      <i class="fa fa-trash"></i> &nbsp;&nbsp; Trash </h1>
+    <!-- paragraph tag to display long block of text -->
+    <p> The city is your home, and only you have the power to improve it. Don't ignore areas with overflowing trash and litter
+      anymore-simply pull out your smartwatch and mark the location to let the authorities know they need to clean up.
+      It only takes a few seconds, and that's all we need to provide a safer environment for you and your fellow city dwellers.
+    </p>
+
+    <!-- image tag to display image of trash -->
+    <img src="assets/img/garbage.gif" alt="">
+    <!-- closing trash div tag -->
+  </div>
+  <!-- closing div content tag -->
+</div>
+<router-outlet></router-outlet>
+<!-- closing body tag -->
+<!-- script tags for javascript -->
+<!-- <script type="text/javascript" src="js/index.js"> </script> -->

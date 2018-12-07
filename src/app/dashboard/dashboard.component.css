@@ -1,0 +1,269 @@
+
+/* setting margin and padding to 0
+for all elements */
+*{
+    margin:0px;
+    padding:0px;
+    overflow:hidden; /*to remove the scrollbar*/
+}
+
+/* setting font, color and background color  */
+/* for all elements in body */
+body{
+    font-family: 'Open Sans', sans-serif;
+    color:#fff;
+    /* background: #202C36; */
+    background:#fff;
+}
+
+/* header div - setting height, display, bg color */
+#header{
+    height:70px;
+    display: flex;
+    /* background: #6A9E33;   */
+    background: #1f6e7f;
+    /* border:1px solid red; */
+}
+
+/* logo_holder div - setting all positioning properties */
+#logo_holder{
+    width:240px;
+    color:#fff;
+    height:70px;
+    border-right:1px solid rgba(255, 255, 255, 0.07);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* logo_holder's span tag - setting font for "green city" */
+#logo_holder > span{
+    font-family:'Roboto';
+}
+
+/* nav options positioning properties set */
+#nav_options{
+    display: flex;
+    position: relative;
+    left:30px;
+    justify-content: center;
+    align-items: center;
+    /* border:1px solid red; */
+}
+/* nav options's span tag "home air litter" font properties set */
+#nav_options > span{
+    font-weight: 100;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0 10px 0 10px; /*top right bottom left padding*/
+    cursor:pointer;
+    color: #fff;
+}
+
+/* removing underline of anchor tag */
+#nav_options > span> a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* setting hover effect for anchor tag */
+#nav_options > span> a:hover{
+  color:#27ae60;
+  transition: color 0.3s;
+
+}
+
+/* settings_outer- "bell, circle, sign out" -
+setting positioning properties*/
+#settings_outer{
+    display: flex;
+    top:15px;
+    width:200px;
+    position: absolute;
+    right:20px;
+    top: 25px;
+    justify-content:space-around;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    /* border:1px solid red; */
+}
+
+/* div tag inside settings outer-  "circle" -
+setting positioning properties*/
+#settings_outer > div{
+    width:40px;
+    height:40px;
+    border-radius: 50%; /*circle*/
+    text-align: center;
+    line-height: 40px;
+    /* border:1px solid red; */
+    /* from eggradient */
+    background-color: #f7b42c;
+    background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);
+}
+
+/* span tag inside settings outer- "bell sign out" -
+setting positioning properties*/
+#settings_outer> span{
+  font-weight: 100;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0 10px 0 10px;
+  cursor:pointer;
+  color: #fff;
+}
+
+/* main_container div- properties for remaining of the page */
+#main_container{
+    /* border:1px solid red; */
+    display: flex;
+    position: relative;
+}
+
+/* main_container's left_outer div
+setting positioning properties */
+#main_container > #left_outer{
+    min-width:240px;
+    height:300px;
+    border-top:1px solid rgba(255, 255, 255, 0.07);
+    /* background: #6A9E33; */
+    background: #1f6e7f;
+    height:calc(100vh - 70px);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* main_container's right_outer div
+setting positioning properties */
+#main_container > #right_outer{
+    /* border:1px solid indianred; */
+    width:100%;
+    height:300px;
+    height:calc(100vh - 70px);
+}
+
+/* left outer div positioning  */
+#left_outer{
+    display: flex;
+    flex-direction: column; /*direction the items are placed*/
+    align-items: center;
+}
+
+
+/* left_outer date positioning properties set*/
+#left_outer > #date{
+    font-weight: 100;
+    position: relative;
+    top:20px;
+    color: #27ae60;
+}
+
+/* left_outer greeting "hi kanye"
+positioning properties, font and color set */
+#left_outer> #greeting_{
+  font-weight: 100;
+  color: rgba(255,255,255,0.5);
+  position: relative;
+  top:60px;
+}
+/* lefy_outer picture positioning */
+#left_outer > #dp{
+    width:100px;
+    height:100px;
+    border-radius: 50%; /*circle*/
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    /* border:1px solid red; */
+    position: relative;
+    top:40px;
+    /* image url is set, image is centered and covers entire div */
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Kanye_West_at_the_2009_Tribeca_Film_Festival.jpg/220px-Kanye_West_at_the_2009_Tribeca_Film_Festival.jpg');
+    background-position:center center;
+    background-size: cover;
+}
+
+/* tabs outer class- "skin heart and pins"
+setting position*/
+.tabs_outer{
+    position: relative;
+    top:60px;
+    width:calc(100% - 40px);
+    /* /border:1px solid red; */
+}
+
+/* tabs outer's tabs class- "skin heart and pins"
+setting position and font*/
+.tabs_outer > .tabs {
+    text-align: center;
+    font-weight: 100;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding:30px;
+    text-transform: uppercase;
+    cursor:pointer;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* hover effect for links in tabs's span tag */
+.tabs_outer > .tabs> span> a:hover{
+  color:#27ae60;
+  transition: color 0.3s;
+}
+
+/* right outer's home page -
+image of month and years properties */
+#right_outer
+{
+  position: relative;
+  width: 100%;
+  height:50%;
+
+}
+
+#floating-panel {
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    z-index: 5;
+    /* background-color: #fff; */
+    padding: 15px;
+    /* border: 1px solid #999; */
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 30px;
+    padding-left: 10px;
+
+  }
+  #floating-panel >p {
+    line-height: 1.3em;
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+    font-size: 1.0em;
+    color: #2c3e50;
+    text-align: right;
+
+  }
+
+  #floating-panel >h1{
+    line-height: 1.3em;
+    font-style: normal;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+    font-size: 3.0em;
+    color:#2c3e50;
+    text-align: right;
+}
+    
+
+/* removing underline from all anchor tags
+and setting font color to white */
+ a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+/* iframe{
+  position: relative;
+  border:none;
+  overflow: hidden;
+} */

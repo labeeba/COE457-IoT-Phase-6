@@ -1,0 +1,43 @@
+<!-- AgmCoreModule provides the Angular Google Map
+    which has its selector agm-map which has its own directives
+    for customization.
+-->
+<agm-map #map [zoom]="12" [latitude]="dubai_airport.lat" [longitude]="dubai_airport.lng" id="map" >
+    <!-- Looping through the pins array in the class using Angular structural directive ngFor -->
+    <div *ngFor="let pin of pin_list">
+        <!-- creating a marker for each location in the array -->
+        <agm-marker (mouseOver)="onMouseOver(pin)" (mouseOut)="onMouseOut(pin)" [latitude]="pin.pin.lat" [longitude]="pin.pin.lng">
+        <!-- agm-info-window provides custom information for each marker, in this case details like temperature and fill level -->
+        <agm-info-window [isOpen]="pin.show" [disableAutoPan]="false" > 
+            <h2 id="firstHeading" class="firstHeading"> Address: {{pin.pin.address}} </h2>
+            <div id="bodyContent">
+            <p>  Latitude: {{pin.pin.lat}} <br>
+            Longitude: {{pin.pin.lng}} <br>
+            Time: {{pin.pin.time}} <br>
+            Name: {{pin.pin.name}} <br>
+            Count: {{pin.pin.count}}  <br> </p>
+            </div>
+          </agm-info-window>
+        </agm-marker>
+    </div>    
+    <!-- looping through the bins array in the class -->
+    <div *ngFor="let bin of bin_list">
+        <!-- creating a marker for each bin using a custom icon from our assets directory -->
+        <agm-marker (mouseOver)="onMouseOver(bin)" (mouseOut)="onMouseOut(bin)" [iconUrl]="bin.bin.proximity>200? redbin : bin.bin.proximity>100? yellowbin : greenbin" [latitude]="bin.bin.lat" [longitude]="bin.bin.lng">
+        <!-- agm-info-window provides custom information for each marker, in this case details like temperature and fill level -->
+          <agm-info-window [isOpen]="bin.show" [disableAutoPan]="false" > 
+            <h2 id="firstHeading" class="firstHeading"> Bin {{bin.bin.binid}} </h2>
+            <div id="bodyContent">
+            <p>  Latitude: {{bin.bin.lat}} <br>
+            Longitude: {{bin.bin.lng}} <br>
+            Temperature: {{bin.bin.temperature}} °C <br>
+            Gas: {{bin.bin.gas}} ppm <br>
+            Proximity: {{bin.bin.proximity}} <br>
+            Time: {{bin.bin.time}}  <br> </p>
+            </div>
+          </agm-info-window>
+        </agm-marker>
+    </div>    
+
+    
+</agm-map>
